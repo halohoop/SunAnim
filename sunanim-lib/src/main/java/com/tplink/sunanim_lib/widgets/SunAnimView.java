@@ -161,20 +161,13 @@ public class SunAnimView extends View {
     }
 
     public void startHaloSpread() {
-        mIsPause = false;
-        if (mUpdateRadiusTask == null) {
-            mUpdateRadiusTask = new UpdateRadiusTask();
+        if (mIsPause) {
+            mIsPause = false;
+            if (mUpdateRadiusTask == null) {
+                mUpdateRadiusTask = new UpdateRadiusTask();
+            }
+            post(mUpdateRadiusTask);
         }
-        post(mUpdateRadiusTask);
-        //---------------------
-//        for (int i = 0; i < mHaloCount; i++) {
-//
-//        }
-//        ValueAnimator radiusAnim = ValueAnimator.ofFloat(mSunRaidus, mHaloSpreadEndRaidus);
-//        ValueAnimator alphaAnim = ValueAnimator.ofInt(255, 0);
-//        AnimatorSet animatorSet = new AnimatorSet();
-//        animatorSet.playTogether(radiusAnim);
-
     }
 
     public void pauseHaloSpread() {
@@ -189,7 +182,7 @@ public class SunAnimView extends View {
      * 扩散速率
      */
     private int mSpreadSpeed = 20;
-    private boolean mIsPause = false;
+    private boolean mIsPause = true;
 
     class UpdateRadiusTask implements Runnable {
         @Override
