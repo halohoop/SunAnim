@@ -181,7 +181,7 @@ public class SunAnimView extends View {
     /**
      * 扩散速率
      */
-    private int mSpreadSpeed = 20;
+    private int mSpreadSpeed = 30;
     private boolean mIsPause = true;
 
     class UpdateRadiusTask implements Runnable {
