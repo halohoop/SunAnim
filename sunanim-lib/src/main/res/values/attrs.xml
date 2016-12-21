@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SunAnimView">
+        <attr name="halo_count" format="integer" />
+        <attr name="raidus" format="dimension" />
+        <attr name="end_radius" format="dimension" />
+        <attr name="sun_color" format="color" />
+        <attr name="sun_center_x" format="float" />
+        <attr name="sun_center_y" format="float" />
+    </declare-styleable>
+</resources>

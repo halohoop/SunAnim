@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="default_sun_radius">50dp</dimen>
+    <dimen name="default_sun_end_radius">200dp</dimen>
+    <dimen name="default_padding_radius">30dp</dimen>
+</resources>
