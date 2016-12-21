@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private SunAnimView sav;
     private TextView tv;
     private TextView tv1;
+    private TextView tv2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +20,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         tv = (TextView) findViewById(R.id.tv);
         tv1 = (TextView) findViewById(R.id.tv1);
+        tv2 = (TextView) findViewById(R.id.tv2);
         tv.setOnClickListener(this);
         tv1.setOnClickListener(this);
+        tv2.setOnClickListener(this);
         sav = (SunAnimView) findViewById(R.id.sav);
     }
 
@@ -38,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv1:
                 sav.pauseHaloSpread();
+            case R.id.tv2:
+                sav.restartHaloSpread();
                 break;
         }
     }

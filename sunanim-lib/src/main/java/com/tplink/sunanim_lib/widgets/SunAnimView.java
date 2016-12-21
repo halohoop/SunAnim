@@ -175,7 +175,12 @@ public class SunAnimView extends View {
     }
 
     public void restartHaloSpread() {
-
+        for (int i = 0; i < mRadiusVos.size(); i++) {
+            RadiusVo radiusVo = mRadiusVos.get(i);
+            radiusVo.mCurrentRadius = mSunRaidus;
+            radiusVo.mColor = mSunColor;
+            radiusVo.mAlpha = 255;
+        }
     }
 
     /**

@@ -19,14 +19,21 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:text="pause"/>
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="restart"/>
     <com.tplink.sunanim_lib.widgets.SunAnimView
         android:id="@+id/sav"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:sun_color="@color/colorPrimary"
-        app:raidus="50dp"
         app:end_radius="200dp"
         app:halo_count="4"
+        app:raidus="50dp"
         app:sun_center_x="200"
-        app:sun_center_y="200"></com.tplink.sunanim_lib.widgets.SunAnimView>
+        app:sun_center_y="200"
+        app:sun_color="@color/colorPrimary"></com.tplink.sunanim_lib.widgets.SunAnimView>
 </RelativeLayout>
